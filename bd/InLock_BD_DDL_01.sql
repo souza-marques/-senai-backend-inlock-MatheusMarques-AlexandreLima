@@ -19,17 +19,14 @@ Email VARCHAR(150) NOT NULL UNIQUE,
 Senha VARCHAR(50) NOT NULL,
 IdTipoUsuario  INT FOREIGN KEY REFERENCES TipoUsuario(IdTipoUsuario)
 );
- SELECT * FROM TipoUsuario;
- SELECT * FROM Usuarios;
- SELECT * FROM Estudios;
- SELECT * FROM Jogos;
+
 
 CREATE TABLE Jogos(
 IdJogo INT PRIMARY KEY IDENTITY,
 Nome  VARCHAR(100) NOT NULL,
 Descricao VARCHAR(700) NOT NULL,
 DataLancamento DATE NOT NULL,
-Valor  VARCHAR NOT NULL,
+Valor  MONEY NOT NUll,
 IdEstudio INT FOREIGN KEY REFERENCES Estudios(IdEstudio)
 );
 
