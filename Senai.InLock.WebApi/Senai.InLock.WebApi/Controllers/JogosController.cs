@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai.InLock.WebApi.Domains;
@@ -15,6 +16,9 @@ namespace Senai.InLock.WebApi.Controllers
     [Route("api/[controller]")]
 
     [ApiController]
+
+    [Authorize]
+
     public class JogosController : ControllerBase
     {
         IJogosRepository _jogosRepository { get; set; }
@@ -30,6 +34,7 @@ namespace Senai.InLock.WebApi.Controllers
             return Ok(_jogosRepository.Listar());
         }
 
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(JogosDomain novoJogo)
         {

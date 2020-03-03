@@ -26,7 +26,7 @@ namespace Senai.InLock.WebApi
                 // Define a versão do .NET Core
                 .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_1);
 
-            services.AddSwaggerGen(c =>
+            /*services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Senai.InLock.WebApi", Version = "v1" });
 
@@ -70,7 +70,7 @@ namespace Senai.InLock.WebApi
                         // Nome da audience, de onde está vindo
                         ValidAudience = "InLock.WebApi"
                     };
-                });
+                });*/
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -81,15 +81,15 @@ namespace Senai.InLock.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger();
+            //app.UseSwagger();
 
-            app.UseSwaggerUI(c =>
+            /*app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Senai.InLock.WebApi");
                 c.RoutePrefix = string.Empty;
             });
 
-            app.UseAuthentication();
+            app.UseAuthentication();*/
 
             app.UseMvc();
         }
