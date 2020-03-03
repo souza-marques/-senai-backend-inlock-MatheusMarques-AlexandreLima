@@ -8,6 +8,6 @@ namespace Senai.InLock.WebApi.Interfaces
 {
     interface IUsuarioRepository
     {
-        List<UsuariosDomain> Listar();
+        UsuariosDomain BuscarPorEmailSenha(string email, string senha);
     }
 }

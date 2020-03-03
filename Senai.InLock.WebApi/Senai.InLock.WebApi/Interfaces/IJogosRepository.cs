@@ -10,6 +10,6 @@ namespace Senai.InLock.WebApi.Interfaces
     {
         List<JogosDomain> Listar();
 
-        void Cadastrar(JogosDomain jogo);
+        void Cadastrar(JogosDomain novoJogo);
     }
 }

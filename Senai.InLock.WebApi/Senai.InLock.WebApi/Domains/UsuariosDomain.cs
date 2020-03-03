@@ -13,6 +13,8 @@ namespace Senai.InLock.WebApi.Domains
 
         public string Senha { get; set; }
 
+        public int IdTipoUsuario { get; set; }
+
         public TipoUsuarioDomain TipoUsuario { get; set; }
     }
 }
